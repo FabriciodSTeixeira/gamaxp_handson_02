@@ -1,8 +1,8 @@
-let btnEdit = document.querySelectorAll('.btn.btn-secondary');
-btnEdit.forEach(e => e.setAttribute('href', 'editar-evento.html'))
+// let btnEdit = document.querySelectorAll('.btn.btn-secondary');
+// btnEdit.forEach(e => e.setAttribute('href', 'editar-evento.html'))
 
-let btnDelete = document.querySelectorAll('.btn.btn-danger');
-btnDelete.forEach(e => e.setAttribute('href', 'excluir-evento.html'))
+// let btnDelete = document.querySelectorAll('.btn.btn-danger');
+// btnDelete.forEach(e => e.setAttribute('href', 'excluir-evento.html'))
 
 
 
@@ -30,8 +30,8 @@ fetch(urlAPI)
                     <td>${shows[i].attractions}</td>
                     <td>
                         <a href="reservas.html" class="btn btn-dark">ver reservas</a>
-                        <a href="editar.html" class="btn btn-secondary">editar</a>
-                        <a href="editar.html" class="btn btn-danger">excluir</a>
+                        <a href="editar-evento.html" class="btn btn-secondary">editar</a>
+                        <a href="excluir-evento.html" class="btn btn-danger">excluir</a>
                     </td>
                 </tr>
                 `
