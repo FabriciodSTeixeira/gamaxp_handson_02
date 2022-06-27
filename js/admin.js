@@ -15,27 +15,27 @@ tabelaShows.forEach(e => e.innerHTML = '')
 async function atualizaLista() {
     await fetch(urlAPI)
         .then((response) => response.json())
-        .then(function(json) {
+        .then(function (json) {
             console.log(json)
             let shows = json;
             shows.map(
-                function() {
+                function () {
                     htmlShows = ""
                     for (i = 0; i < 5; i++) {
                         htmlShows +=
                             `
-                <tr>
-                    <th scope="row">${i+1}</th>
-                    <td>${shows[i].scheduled}</td>
-                    <td>${shows[i].name}</td>
-                    <td>${shows[i].attractions}</td>
-                    <td>
-                        <a href="reservas.html" class="btn btn-dark">ver reservas</a>
-                        <a href="editar-evento.html?id=${shows[i]._id}" class="btn btn-secondary">editar</a>
-                        <a href="excluir-evento.html?id=${shows[i]._id}" class="btn btn-danger">excluir</a>
-                    </td>
-                </tr>
-                `
+                            <tr>
+                                <th scope="row">${i + 1}</th>
+                                <td>${shows[i].scheduled}</td>
+                                <td>${shows[i].name}</td>
+                                <td>${shows[i].attractions}</td>
+                                <td>
+                                    <a href="reservas.html" class="btn btn-dark">ver reservas</a>
+                                    <a href="editar-evento.html?id=${shows[i]._id}" class="btn btn-secondary">editar</a>
+                                    <a href="excluir-evento.html?id=${shows[i]._id}" class="btn btn-danger">excluir</a>
+                                </td>
+                            </tr>
+                            `
                     }
 
                     tabelaShows.forEach(e => e.innerHTML = htmlShows)
