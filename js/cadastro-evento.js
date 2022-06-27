@@ -24,5 +24,7 @@ formEvento.addEventListener('submit', (e) => {
         })
         .then(response => response.json())
         .then(json => console.log(json))
+        .then(window.alert('Evento Cadastrado'))
+        .then(window.location.reload(true))
         .catch(err => console.log(err))
 })
