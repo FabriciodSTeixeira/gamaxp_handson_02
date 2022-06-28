@@ -36,6 +36,8 @@ setFavicons(favImg)
 
 /* ---------------------- Favicon end ---------------------- */
 
+
+// Adiciona Funcionalidades aos botões na lista a esquerda.
 let btntAside = document.getElementsByClassName('nav-link');
 btntAside[0].setAttribute('href', 'admin.html');
 btntAside[3].setAttribute('href', 'index.html');
