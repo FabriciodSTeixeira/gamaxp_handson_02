@@ -32,3 +32,31 @@ formEvento.addEventListener('submit', (e) => {
         .then(window.location.reload(true))
         .catch(err => console.log(err))
 })
+
+/* inicio da responsividade * deve ficar no final do JS para carregar apos o carregamento da página */
+// objetos a ser alterados no media
+let divdapagina = document.querySelector("body > div > div");
+let aside = document.querySelector("body > div > div > aside");
+let imgtopo = document.querySelector("body > div > div > aside > a > span > img");
+
+// função para capturar tamanho da tela e manipular como um @mediaquery
+function myFunction(x) {
+    if (x.matches) { 
+        divdapagina.style.flexDirection = "column";
+        aside.style.width = '100%'
+        // aside.style.alignItems = "center";
+        formEvento.style.width = '100%'
+        imgtopo.style.maxWidth = '100px' 
+        
+    } else {
+        divdapagina.style.flexDirection = "row";
+        aside.style.width = '220px'
+        formEvento.style.width = '50%'
+        imgtopo.style.maxWidth = '100%'
+    }
+  }
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) 
+  x.addListener(myFunction);
+
+/* fim da responsivodade */
