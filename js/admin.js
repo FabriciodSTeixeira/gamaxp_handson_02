@@ -1,17 +1,8 @@
-// let btnEdit = document.querySelectorAll('.btn.btn-secondary');
-// btnEdit.forEach(e => e.setAttribute('href', 'editar-evento.html'))
-
-// let btnDelete = document.querySelectorAll('.btn.btn-danger');
-// btnDelete.forEach(e => e.setAttribute('href', 'excluir-evento.html'))
-
-
-
-/* Início tablea dinâmica dos shows */
-
 const urlAPI = "https://xp41-soundgarden-api.herokuapp.com/events";
 const tabelaShows = document.querySelectorAll('.table tbody');
 tabelaShows.forEach(e => e.innerHTML = '')
 
+/* Início tabela dinâmica dos shows */
 async function atualizaLista() {
     await fetch(urlAPI)
         .then((response) => response.json())
@@ -55,11 +46,9 @@ async function atualizaLista() {
                     }
 
                     tabelaShows.forEach(e => e.innerHTML = htmlShows)
-
                 }
             )
             return shows
         })
-
 }
 atualizaLista();

@@ -23,7 +23,6 @@ async function getIdText(idUrl) {
 }
 getIdText(id)
 
-
 //Event Listener que ao clicar o botão, realiza um request de DELETE na API, apagando os valores da ID repassada
 formEvento.addEventListener('submit', (e) => {
     e.preventDefault();
