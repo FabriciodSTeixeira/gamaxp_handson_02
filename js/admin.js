@@ -15,11 +15,11 @@ tabelaShows.forEach(e => e.innerHTML = '')
 async function atualizaLista() {
     await fetch(urlAPI)
         .then((response) => response.json())
-        .then(function (json) {
+        .then(function(json) {
             console.log(json)
             let shows = json;
             shows.map(
-                function () {
+                function() {
                     htmlShows = ""
                     for (i = 0; i < 5; i++) {
                         htmlShows +=
@@ -30,11 +30,27 @@ async function atualizaLista() {
                                 <td>${shows[i].name}</td>
                                 <td>${shows[i].attractions}</td>
                                 <td>
-                                    <a href="reservas.html" class="btn btn-dark">ver reservas</a>
+                                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">ver reservas</button>
                                     <a href="editar-evento.html?id=${shows[i]._id}" class="btn btn-secondary">editar</a>
                                     <a href="excluir-evento.html?id=${shows[i]._id}" class="btn btn-danger">excluir</a>
                                 </td>
                             </tr>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Reservar</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>A quantidade de ingressos desse show são ${shows[i].number_tickets}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                             `
                     }
 
