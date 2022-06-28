@@ -3,9 +3,7 @@ let urlString = window.location;
 let url = new URL(urlString);
 let id = url.search.substring('?id='.length)
 
-
 const formEvento = document.querySelector('form');
-
 
 // Função que realiza um get da API, trata o dado recebido e após isso realiza o preenchimento dos campos (autofill) baseado na ID.
 async function getIdText(idUrl) {

@@ -17,7 +17,7 @@ formEvento.addEventListener('submit', (e) => {
             number_tickets: formEvento.elements[4].value
 
         }
-        // Um fetch que realiza a transformação dos dados em JSON e 
+    // Um fetch que realiza a transformação dos dados em JSON e envia no metodo POST
     fetch(urlAPI, {
             method: "POST",
             body: JSON.stringify(enviaForm),
