@@ -12,7 +12,7 @@ async function atualizaLista() {
             shows.map(
                 function() {
                     htmlShows = ""
-                    for (i = 0; i < 5; i++) {
+                    for (i = 0; i < 20; i++) {
                         htmlShows +=
                             `
                             <tr>
