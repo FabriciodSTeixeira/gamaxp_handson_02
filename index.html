@@ -20,11 +20,13 @@
                 <h1>Adicione um banner maneiro aqui</h1>
             </div>
         </section>
-        <section class="full d-flex justify-content-center align-items-center flex-wrap">
+        <!-- removido classes para melhor responsividade  d-flex justify-content-center align-items-center flex-wrap-->
+        <section class="full">
             <div class="container text-center">
                 <h2>Próximos eventos</h2>
             </div>
-            <div id="containerCards" class="container d-flex justify-content-center align-items-center">
+            <!-- adicionado classe flex-wrap para corrigir responsividade e id para carregamento dinamico -->
+            <div id="containerCards" class="container d-flex justify-content-center align-items-center flex-wrap">
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
                     <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
@@ -62,7 +64,8 @@
                         <p>Nemo excepturi soluta provident minima amet? Architecto distinctio molestiae nisi necessitatibus nesciunt possimus dignissimos consequatur iusto cupiditate quam accusantium tempora odio at deleniti explicabo voluptatum blanditiis
                             natus qui, dolorem ea eius minima itaque aspernatur? Quia voluptatem ex, mollitia consequuntur quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
                     </div>
-                    <div class="col">
+                    <!-- adicionado class para esconder imagem com responsividade -->
+                    <div class="col hidemImg">
                         <img src="img/music.svg" width="500px">
                     </div>
                 </div>
@@ -71,7 +74,8 @@
 
     </main>
     <footer>
-        <div class="container d-flex justify-content-center align-items-center">
+        <!-- adicionado flex-wrap para responsividade -->
+        <div class="container d-flex justify-content-center align-items-center flex-wrap">
             <a href="#">
                 <img src="img/Sound-logo-black (1).png" width="200px" alt="">
             </a>
@@ -88,7 +92,7 @@
         </div>
     </footer>
 </body>
-<!-- <script src="./js/scripts.js"></script> -->
+<script src="./js/favicon.js"></script>
 <script src="./js/index.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

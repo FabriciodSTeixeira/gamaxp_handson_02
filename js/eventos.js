@@ -11,7 +11,7 @@ async function atualizaCards() {
             cards.map(
                 function() {
                     htmlCards = ""
-                    for (i = 0; i < 3; i++) {
+                    for (i = 0; i < cards.length; i++) {
                         htmlCards +=
                             `
                             <article class="evento card p-5 m-3">
@@ -89,63 +89,3 @@ async function criarReserva(idEventoReserva) {
         // .then(window.location.reload(true))
         .catch(err => console.log(err))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function resposividade() {
-//     /* inicio da responsividade * deve ficar no final do JS para carregar apos o carregamento da página */
-//     // correção no primeiro container
-//     let container1 = document.querySelector("body > main > section:nth-child(2) > div.container.d-flex.justify-content-center.align-items-center");
-//     container1.classList.add("flex-wrap");
-//     //paragravo do 2 container com problema a ser resolvido no mediaq
-//     var pContainer2 = document.querySelector("body > main > section:nth-child(3) > div > div > div:nth-child(1)");
-//     //imagem a ser apagada no mediaquery
-//     var imgparaapagar1 = document.querySelector("body > main > section:nth-child(3) > div > div > div:nth-child(2) > img");
-//     // imagem a ser reduzida no mediaQ
-//     var imgreduzir1 = document.querySelector("body > header > img")
-//     var imgreduzir2 = document.querySelector("body > footer > div > a > img");
-//     // função para capturar tamanho da tela e manipular como um @mediaquery
-//     function myFunction(x) {
-//         if (x.matches) {
-//             imgparaapagar1.style.display = "none";
-//             imgreduzir1.style.width = "70%";
-//             imgreduzir2.style.width = "100%";
-//             pContainer2.style.minWidth = "100%";
-//         } else {
-//             imgparaapagar1.style.display = '';
-//             pContainer2.style.minWidth = "400px";
-//             imgreduzir1.style.width = "";
-//             imgreduzir2.style.width = "";
-//         }
-//     }
-//     var x = window.matchMedia("(max-width: 700px)")
-//     myFunction(x)
-//     x.addListener(myFunction);
-//     /* fim da responsivodade */
-// }

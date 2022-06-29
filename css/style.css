@@ -48,3 +48,12 @@ footer nav ul{
 footer nav ul li  {
     padding: 10px;
 }
+
+@media only screen and (max-width: 1000px) {
+    * {
+        font-size: small;
+    }    
+    .hidemImg {
+        display: none;
+    }
+}
