@@ -18,7 +18,8 @@ let modalReservarDiv = `
 `
 
 
-const cardsReserva = document.querySelectorAll("body > main > section:nth-child(2)")
+const cardsReserva = document.querySelectorAll("#containerCards")
+
 const urlAPI = "https://xp41-soundgarden-api.herokuapp.com/events";
 
 async function atualizaCards() {
@@ -30,7 +31,7 @@ async function atualizaCards() {
             cards.map(
                 function() {
                     htmlCards = ""
-                    for (i = 0; i < 5; i++) {
+                    for (i = 0; i < 3; i++) {
                         htmlCards +=
                             `
                             <article class="evento card p-5 m-3">

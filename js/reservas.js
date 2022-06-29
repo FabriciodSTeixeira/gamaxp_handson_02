@@ -14,7 +14,7 @@ async function atualizaLista() {
         .then(function(json) {
             console.log(json)
             let shows = json;
-            if (shows.length === 0 ){
+            if (shows.length === 0) {
                 window.alert('Evento não possue reservas')
             }
             shows.map(
@@ -43,7 +43,7 @@ async function atualizaLista() {
 }
 atualizaLista();
 
-function deletarreserva(idReserva){
+function deletarreserva(idReserva) {
     fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings/${idReserva}`, { method: "DELETE" })
         .then(window.alert('Reserva excluida'))
         .then(window.location.reload(true))
