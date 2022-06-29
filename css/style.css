@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-body{
+body {
     font-family: 'Questrial', sans-serif;
 }
 
@@ -13,15 +13,17 @@ header {
     width: 100%;
     background-color: #fff;
 }
+
 aside {
     min-height: 100vh;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     background-color: #C2185B;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #C2185B;
     border-color: #C2185B;
 }
@@ -30,9 +32,9 @@ main.login {
     width: 400px;
 }
 
-section.full{
+section.full {
     width: 100%;
-    min-height: 80vh;
+    /* min-height: 80vh; ajustar tabela diâmica do index*/
     padding: 50px 0;
 }
 
@@ -40,20 +42,53 @@ article.evento {
     width: 350px;
 }
 
-footer nav ul{
+footer nav ul {
     list-style: none;
     display: flex;
 }
 
-footer nav ul li  {
+footer nav ul li {
     padding: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
     * {
         font-size: small;
-    }    
+    }
     .hidemImg {
         display: none;
+    }
+}
+
+
+/* Parâmetros para ajustar o carousel */
+
+.carousel,
+.carousel img {
+    width: 90%;
+}
+
+.carousel img {
+    height: 25em!important;
+}
+
+@media only screen and (max-width:450px) {
+    .carousel,
+    .carousel img {
+        width: 50vh;
+    }
+}
+
+.carousel img {
+    height: 15em!important;
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel,
+    .carousel img {
+        width: 180vh;
+    }
+    .carousel img {
+        height: 80vh!important;
     }
 }

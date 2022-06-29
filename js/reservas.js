@@ -2,7 +2,8 @@ let urlString = window.location;
 let url = new URL(urlString);
 let id = url.search.substring('?id='.length)
 
-
+let buttonAside = document.querySelector("html body div.container-fluid div.row aside.d-flex.flex-column.flex-shrink-0.p-3.bg-light.col-2 ul.nav.nav-pills.flex-column.mb-auto li.nav-item a.nav-link.active");
+buttonAside.setAttribute('href', 'admin.html')
 const urlAPI = `https://xp41-soundgarden-api.herokuapp.com/bookings/event/${id}`;
 const tabelaShows = document.querySelectorAll('.table tbody');
 tabelaShows.forEach(e => e.innerHTML = '')

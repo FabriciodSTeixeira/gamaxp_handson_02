@@ -12,10 +12,11 @@ async function atualizaCards() {
                 function() {
                     htmlCards = ""
                     for (i = 0; i < cards.length; i++) {
+                        let dateFormatted = new Date(cards[i].scheduled).toLocaleString()
                         htmlCards +=
                             `
                             <article class="evento card p-5 m-3">
-                            <h2>${cards[i].name} - ${cards[i].scheduled}</h2>
+                            <h2>${cards[i].name} - ${dateFormatted}</h2>
                             <h4>${cards[i].attractions}</h4>
                             <p>${cards[i].description}</p>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" >reservar ingresso</button>

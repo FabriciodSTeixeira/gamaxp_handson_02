@@ -3,6 +3,9 @@ let urlString = window.location;
 let url = new URL(urlString);
 let id = url.search.substring('?id='.length)
 
+let buttonAside = document.querySelector("html body div.container-fluid div.row aside.d-flex.flex-column.flex-shrink-0.p-3.bg-light.col-2 ul.nav.nav-pills.flex-column.mb-auto li.nav-item a.nav-link.active");
+buttonAside.setAttribute('href', 'admin.html')
+
 const formEvento = document.querySelector('form');
 
 // Função que realiza um get da API, trata o dado recebido e após isso realiza o preenchimento dos campos (autofill) baseado na ID.
@@ -15,7 +18,7 @@ async function getIdText(idUrl) {
             document.getElementById('banner').setAttribute('value', `${evento.poster}`)
             document.getElementById('atracoes').setAttribute('value', `${evento.attractions}`)
             document.getElementById('descricao').innerHTML = `${evento.description}`
-            document.getElementById('data').setAttribute('value', `${evento.scheduled}`)
+            document.getElementById('data').setAttribute('value', `${new Date(evento.scheduled).toLocaleString()}`)
             document.getElementById('lotacao').setAttribute('value', `${evento.number_tickets}`)
             console.log(evento)
         })
@@ -60,28 +63,22 @@ let imgtopo = document.querySelector("body > div > div > aside > a > span > img"
 
 // função para capturar tamanho da tela e manipular como um @mediaquery
 function myFunction(x) {
-    if (x.matches) { 
+    if (x.matches) {
         divdapagina.style.flexDirection = "column";
         aside.style.width = '100%'
-        // aside.style.alignItems = "center";
+            // aside.style.alignItems = "center";
         formEvento.style.width = '100%'
-        imgtopo.style.maxWidth = '100px' 
-        
+        imgtopo.style.maxWidth = '100px'
+
     } else {
         divdapagina.style.flexDirection = "row";
         aside.style.width = '220px'
         formEvento.style.width = '50%'
         imgtopo.style.maxWidth = '100%'
     }
-  }
-  var x = window.matchMedia("(max-width: 700px)")
-  myFunction(x) 
-  x.addListener(myFunction);
+}
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x)
+x.addListener(myFunction);
 
 /* fim da responsivodade */
-
-
-
-
-
-
