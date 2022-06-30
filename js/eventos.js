@@ -69,8 +69,8 @@ atualizaCards();
 
 
 async function criarReserva(idEventoReserva) {
-    const formReserva = document.querySelector("#exampleModalLong > div > div > div.modal-body > form")
-        // console.log(formReserva);
+    const formReserva = document.querySelector(".show > div > div > div.modal-body > form")
+    console.log(formReserva);
     formReserva.addEventListener('submit', e => e.preventDefault())
     const enviarReserva = {
             owner_name: formReserva.elements[0].value,
