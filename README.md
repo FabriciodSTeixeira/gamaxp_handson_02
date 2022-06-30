@@ -1,4 +1,5 @@
 # gamaxp_handson_02
+<a href="https://fabriciodsteixeira.github.io/gamaxp_handson_02/">GitHub Pages Desafio</a>
 
 <strong>Grupo 10:</strong><br>
 Fabrício Teixeira<br>
