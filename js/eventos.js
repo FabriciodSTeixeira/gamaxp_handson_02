@@ -19,14 +19,14 @@ async function atualizaCards() {
                             <h2>${cards[i].name} - ${dateFormatted}</h2>
                             <h4>${cards[i].attractions}</h4>
                             <p>${cards[i].description}</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" >reservar ingresso</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong${i}" >reservar ingresso</button>
                             </article>
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal fade" id="exampleModalLong${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLongTitle">${cards[i].name}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>

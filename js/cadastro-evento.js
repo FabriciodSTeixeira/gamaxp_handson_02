@@ -29,3 +29,8 @@ formEvento.addEventListener('submit', (e) => {
         .then(window.location.reload(true))
         .catch(err => console.log(err))
 })
+
+/************ classes adicionais para responsividade ************/
+document.querySelector("body > div > div > aside").classList.add("fitContent");
+document.querySelector("body > div > div > main").classList.add("fitContent");
+document.querySelector("body > div > div > main > div:nth-child(2) > form").classList.add("fitContent");

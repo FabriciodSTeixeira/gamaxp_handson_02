@@ -16,7 +16,7 @@ async function atualizaLista() {
             console.log(json)
             let shows = json;
             if (shows.length === 0) {
-                window.alert('Evento não possue reservas')
+                window.alert('Evento não possui reservas')
             }
             shows.map(
                 function() {
@@ -27,7 +27,7 @@ async function atualizaLista() {
                             <tr>
                                 <th scope="row">${i + 1}</th>
                                 <td>${shows[i].owner_name}</td>
-                                <td>${shows[i].owner_email}</td>
+                                <td class="hidemImg">${shows[i].owner_email}</td>
                                 <td>${shows[i].number_tickets}</td>
                                 <td>
                                     <button" id class="btn btn-danger" onclick="deletarreserva('${shows[i]._id}')">excluir</button>
@@ -50,3 +50,6 @@ function deletarreserva(idReserva) {
         .then(window.location.reload(true))
         .catch(err => console.log(err))
 }
+/************ classes adicionais para responsividade ************/
+document.querySelector("body > div > div > aside").classList.add("fitContent");
+document.querySelector("body > div > div > main").classList.add("fitContent");
