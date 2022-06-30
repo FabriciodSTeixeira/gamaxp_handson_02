@@ -51,13 +51,17 @@ footer nav ul li {
     padding: 10px;
 }
 
-@media only screen and (max-width: 1000px) {
+/* ajuste de responsividade */
+@media only screen and (max-width: 700px) {
     * {
         font-size: small;
     }
     .hidemImg {
         display: none;
     }
+    .fitContent{
+        min-width:100%;
+    }    
 }
 
 

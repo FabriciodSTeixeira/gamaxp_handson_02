@@ -23,7 +23,7 @@ async function atualizaLista() {
                                 <th scope="row">${i + 1}</th>
                                 <td>${dateFormatted}</td>
                                 <td>${shows[i].name}</td>
-                                <td>${shows[i].attractions}</td>
+                                <td class="hidemImg">${shows[i].attractions}</td>
                                 <td>
                                     <a href="reservas.html?id=${shows[i]._id}" class="btn btn-dark">ver reservas</a>
                                     <a href="editar-evento.html?id=${shows[i]._id}" class="btn btn-secondary">editar</a>
@@ -40,3 +40,7 @@ async function atualizaLista() {
         })
 }
 atualizaLista();
+/************ classes adicionais para responsividade ************/
+document.querySelector("body > div > div > aside").classList.add("fitContent");
+document.querySelector("body > div > div > main").classList.add("fitContent");
+document.querySelector("body > div > div > main > div.bd-example > div > table > thead > tr > th:nth-child(4)").classList.add("hidemImg");
