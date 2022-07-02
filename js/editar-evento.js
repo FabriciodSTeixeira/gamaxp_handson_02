@@ -1,4 +1,3 @@
-// Tratamento da url, separando apenas o dado de interesse (neste caso o ID)
 let urlString = window.location;
 let url = new URL(urlString);
 let id = url.search.substring('?id='.length)
